@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+</head>
+<body>
+    <h1>AI Usage Survey</h1>
+    <form action="/submit_survey" method="post">
+        <!-- Age Field -->
+        <label for="age">Wiek:</label><br>
+        <input type="number" id="age" name="age" min="1" max="120" required><br><br>
+
+        <!-- Gender Field -->
+        <label>Płeć:</label><br>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Mężczyzna</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Kobieta</label><br>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Inna</label><br><br>
+
+        <!-- ChatGPT Usage Frequency -->
+        <label for="usage">Jak często korzystasz z ChatGPT:</label><br>
+        <select id="usage" name="usage" required>
+            <option value="" disabled selected>--Wybierz--</option>
+            <option value="never">Nigdy</option>
+            <option value="rarely">Rzadko</option>
+            <option value="occasionally">Okazjonalnie</option>
+            <option value="often">Często</option>
+            <option value="always">Stale</option>
+        </select><br><br>
+
+        <!-- AI Benefits Description -->
+        <label for="benefits">Opisz krótko korzyści wynikające z używania AI:</label><br>
+        <textarea id="benefits" name="benefits" rows="4" cols="50" placeholder="Wpisz swoje odpowiedzi..." required></textarea><br><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Wyślij</button>
+    </form>
+</body>
+</html>
